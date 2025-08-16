@@ -3,9 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Document</title>
+    <link rel="stylesheet" href="main.css">
 </head>
+<title> HTML CSS RESPONSIVE NAVBAR </title>
 <body>
-    
+    <header>
+        <div class="navbar">
+            <div class="logo"><a href="">OLRAF SI</a></div>
+            <ul class="links">
+                <li><a href="">Acceuil</a></li>
+                <li><a href="">Product</a></li>
+                <li><a href="">Services</a></li>
+                <li><a href="">About</a></li>
+                <li><a href="">Contact</a></li>
+            </ul>
+            <a href="" class="action-btn">Get Started</a>
+            <div class="toggle_btn">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+            <div class="menu_bas">
+                <li><a href="">Acceuil</a></li>
+                <li><a href="">Product</a></li>
+                <li><a href="">Services</a></li>
+                <li><a href="">About</a></li>
+                <li><a href="">Contact</a></li>
+                <li><a href="" class="action-btn">Get Started</a></li>
+            </div>
+        </div>
+    </header>
+
+<script>
+    const butt = document.querySelector('.toggle_btn')
+    const buttonicon = document.querySelector('.toggle_btn i')
+    const menu_bas = document.querySelector('.menu_bas')
+
+    butt.onclick = function () {
+        menu_bas.classList.toggle('open')
+        const isopen = menu_bas.classList.contains('open')
+        buttonicon.classList = isopen
+        ? 'fa-solid fa-xmark'
+        : 'fa-solid fa-bars'
+    }
+</script>
+
 </body>
 </html>
